@@ -1,0 +1,8 @@
+- name: Create a file
+  hosts: stapp03
+  become: yes
+  tasks:
+    - name: Create the file in Nautilus App 3
+      file:
+        path: /tmp/file.txt
+        state: touch
