@@ -1,0 +1,20 @@
+MASTER:
+1)kube-apiserver: For communication of all objects in cluster.
+2)ETCD: Has all the latest upadets of whats going on in the cluster. ditributed key value store.Represents the state of a cluster at a specific moment in time.
+3)Controller-Manager: Checks the status of all the nodes and pods, all services.Checks on which node the pod cn be schedules.
+                      responsible for maintaing the desired stable state of the cluster.
+4)kube-scheduler: Schedule PODs according to available resources on executor nodes.
+
+WORKER:
+1)kubelet: kubelet runs on each node, Agent for managing and communicating with the master.Controls and maintains a set of pods by watching for pod specs through  the         Kubernetes API server.
+2)kube-proxy: kube-proxy is a network proxy that runs on each node in your cluster, implementing part of the Kubernetes Service concept. kube-proxy maintains network rules on nodes. These network rules allow network communication to your Pods from network sessions inside or outside of your cluster.
+
+Kubectl?
+Kubectl is a CLI (command-line interface) that is used to run commands against Kubernetes clusters.
+
+Kubelet?
+The kubelet is a service agent that controls and maintains a set of pods by watching for pod specs through the Kubernetes API server.
+The kubelet runs on each node and enables the communication between the master and slave nodes.
+
+PODS?
+Pods are the smallest unit of objects that can be deployed on Kubernetes, Kubernetes packages one or more containers into a higher-level structure called a pod. Pod runs one level higher to the container.
